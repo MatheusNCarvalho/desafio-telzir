@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Domain", "2-Domain", "{7E7A7F03-AAD6-4AF6-9333-875213062470}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Tests", "4-Tests", "{847A381A-5035-491E-A3B1-3FB0FDAEC822}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Services", "1-Services", "{A6DACF9B-2EA3-4499-88C3-55CF55FA8047}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infra", "3-Infra", "{BC89ECBA-0283-464F-8BA5-604B427B728D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTelzir.Domain", "src\ChallengeTelzir.Domain\ChallengeTelzir.Domain.csproj", "{13731217-BC33-4FA9-A438-23D9BC8F749F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTelzir.Domain.Core", "src\ChallengeTelzir.Domain.Core\ChallengeTelzir.Domain.Core.csproj", "{C3E7CABD-D3C6-4688-AA5A-024EA6D31194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTelzir.Tests", "tests\ChallengeTelzir.Tests\ChallengeTelzir.Tests.csproj", "{B519CA02-FA5F-4AE3-80DB-A4CAFBAFA7A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1-Data", "3.1-Data", "{109CDA87-AFA5-4F2B-AA95-61E035364521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTelzir.Infra.Data", "src\ChallengeTelzir.Infra.Data\ChallengeTelzir.Infra.Data.csproj", "{CD36124E-4AB4-47A4-81F8-109EBD6F3C7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2-CrossCutting", "3.2-CrossCutting", "{5AED0724-F39B-4B36-807F-6009AB6CBDB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTelzir.Infra.CrossCutting.IoC", "src\ChallengeTelzir.Infra.CrossCutting.IoC\ChallengeTelzir.Infra.CrossCutting.IoC.csproj", "{5379BF7F-79AA-40ED-B146-059E7497475A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTelzir.Services.API", "src\ChallengeTelzir.Services.API\ChallengeTelzir.Services.API.csproj", "{1791B476-20D9-44C8-B573-6053026CA27C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13731217-BC33-4FA9-A438-23D9BC8F749F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13731217-BC33-4FA9-A438-23D9BC8F749F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13731217-BC33-4FA9-A438-23D9BC8F749F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13731217-BC33-4FA9-A438-23D9BC8F749F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E7CABD-D3C6-4688-AA5A-024EA6D31194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E7CABD-D3C6-4688-AA5A-024EA6D31194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E7CABD-D3C6-4688-AA5A-024EA6D31194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E7CABD-D3C6-4688-AA5A-024EA6D31194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B519CA02-FA5F-4AE3-80DB-A4CAFBAFA7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B519CA02-FA5F-4AE3-80DB-A4CAFBAFA7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B519CA02-FA5F-4AE3-80DB-A4CAFBAFA7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B519CA02-FA5F-4AE3-80DB-A4CAFBAFA7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD36124E-4AB4-47A4-81F8-109EBD6F3C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD36124E-4AB4-47A4-81F8-109EBD6F3C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD36124E-4AB4-47A4-81F8-109EBD6F3C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD36124E-4AB4-47A4-81F8-109EBD6F3C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5379BF7F-79AA-40ED-B146-059E7497475A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5379BF7F-79AA-40ED-B146-059E7497475A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5379BF7F-79AA-40ED-B146-059E7497475A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5379BF7F-79AA-40ED-B146-059E7497475A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1791B476-20D9-44C8-B573-6053026CA27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1791B476-20D9-44C8-B573-6053026CA27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1791B476-20D9-44C8-B573-6053026CA27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1791B476-20D9-44C8-B573-6053026CA27C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13731217-BC33-4FA9-A438-23D9BC8F749F} = {7E7A7F03-AAD6-4AF6-9333-875213062470}
+		{C3E7CABD-D3C6-4688-AA5A-024EA6D31194} = {7E7A7F03-AAD6-4AF6-9333-875213062470}
+		{B519CA02-FA5F-4AE3-80DB-A4CAFBAFA7A8} = {847A381A-5035-491E-A3B1-3FB0FDAEC822}
+		{109CDA87-AFA5-4F2B-AA95-61E035364521} = {BC89ECBA-0283-464F-8BA5-604B427B728D}
+		{CD36124E-4AB4-47A4-81F8-109EBD6F3C7A} = {109CDA87-AFA5-4F2B-AA95-61E035364521}
+		{5AED0724-F39B-4B36-807F-6009AB6CBDB6} = {BC89ECBA-0283-464F-8BA5-604B427B728D}
+		{5379BF7F-79AA-40ED-B146-059E7497475A} = {5AED0724-F39B-4B36-807F-6009AB6CBDB6}
+		{1791B476-20D9-44C8-B573-6053026CA27C} = {A6DACF9B-2EA3-4499-88C3-55CF55FA8047}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1690082-561A-4CAF-87AB-3EDB38CBDD14}
+	EndGlobalSection
+EndGlobal
