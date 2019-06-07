@@ -15,10 +15,10 @@ namespace ChallengeTelzir.Services.API.Configurations
                 s.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
-                    Title = "MT Grãos",
-                    Description = $"Api do site MT Grãos",
+                    Title = "Desafio Telzir",
+                    Description = "Api do desafio Telzir",
                     TermsOfService = "Nenhum",
-                    Contact = new Contact { Name = "Crosoften", Email = "contato@crosoften.com", Url = "https://crosoften.com/" }
+                    Contact = new Contact { Name = "Matheus Neves", Email = "matheusnevesdecarvalho@gmail.com", Url = "" }
                 });
 
 
