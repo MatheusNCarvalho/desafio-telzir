@@ -66,15 +66,7 @@ A Telzir, preocupada com a transparência junto aos seus clientes, quer disponib
         <th>Plano FaleMais</th>
         <th>Com FaleMais</th>
         <th>Sem FaleMais</th>
-    </tr>
-    <tr>
-        <td>011</td>
-        <td>016</td>
-        <td>20</td>
-        <td>FaleMais 30</td>
-        <td>0,00</td>
-        <td>38,00</td>
-    </tr>
+    </tr>   
     <tr>
         <td>011</td>
         <td>016</td>
@@ -101,4 +93,3 @@ A Telzir, preocupada com a transparência junto aos seus clientes, quer disponib
     </tr> 
    
 </table>
-Read more: http://www.linhadecodigo.com.br/artigo/3439/introducao-ao-html-usando-tabelas-em-html.aspx#ixzz5qBHYQEeu
