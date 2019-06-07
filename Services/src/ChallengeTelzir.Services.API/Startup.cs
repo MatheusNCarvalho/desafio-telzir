@@ -1,5 +1,8 @@
-﻿using ChallengeTelzir.Infra.Data.Context;
+﻿using AutoMapper;
+using ChallengeTelzir.Infra.Data.Context;
+using ChallengeTelzir.Services.API.AutoMapper;
 using ChallengeTelzir.Services.API.Configurations;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +27,13 @@ namespace ChallengeTelzir.Services.API
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("ChallengeTelzir"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            AutoMapperConfiguration.RegisterMappings();
+            services.AddAutoMapper(typeof(Startup));
+            services.AddMediatR(typeof(Startup));
             services.AddDIConfiguration();
+            services.AddSwaggerConfig();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +51,12 @@ namespace ChallengeTelzir.Services.API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Desafio Telzir v1.0");
+            });
+
         }
     }
 }

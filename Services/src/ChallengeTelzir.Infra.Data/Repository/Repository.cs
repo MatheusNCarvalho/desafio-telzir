@@ -24,13 +24,13 @@ namespace ChallengeTelzir.Infra.Data.Repository
         public async Task Add(TEntity obj)
         {
             await DbSet.AddAsync(obj);
-            await SaveChanges();
+            // await SaveChanges();
         }
 
         public async Task Add(IList<TEntity> obj)
         {
             await DbSet.AddRangeAsync(obj);
-            await SaveChanges();
+            //await SaveChanges();
         }
 
 
@@ -55,7 +55,7 @@ namespace ChallengeTelzir.Infra.Data.Repository
             if (obj != null)
                 DbSet.Remove(obj);
 
-            await SaveChanges();
+            // await SaveChanges();
         }
 
         public async Task SaveChanges()

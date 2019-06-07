@@ -14,12 +14,12 @@ namespace ChallengeTelzir.Infra.Data.UnitOfWork
 
         public bool Commit()
         {
-            throw new System.NotImplementedException();
+            return _context.SaveChanges() > 0;
         }
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            _context?.Dispose();
         }
     }
 }

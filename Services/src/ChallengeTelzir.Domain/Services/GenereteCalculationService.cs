@@ -5,6 +5,7 @@ using ChallengeTelzir.Domain.DTO;
 using ChallengeTelzir.Domain.Entites;
 using ChallengeTelzir.Domain.Handler;
 using ChallengeTelzir.Domain.Interfaces;
+using ChallengeTelzir.Domain.Interfaces.Repository;
 using ChallengeTelzir.Domain.Interfaces.Services;
 using MediatR;
 
@@ -15,7 +16,7 @@ namespace ChallengeTelzir.Domain.Services
         private readonly IFixedRatesReposiotry _fixedRatesReposiotry;
         private readonly IDetailedCalculationConnectionValueReposiotry _detailedCalculationConnection;
 
-        public GenereteCalculationService(IMediator mediator, INotificationHandler<DomainNotification> notification, IFixedRatesReposiotry fixedRatesReposiotry, IDetailedCalculationConnectionValueReposiotry detailedCalculationConnection) : base(mediator, notification)
+        public GenereteCalculationService(IMediator mediator, INotificationHandler<DomainNotification> notification, IFixedRatesReposiotry fixedRatesReposiotry, IDetailedCalculationConnectionValueReposiotry detailedCalculationConnection, IUnitOfWork unitOfWork) : base(mediator, notification, unitOfWork)
         {
             _fixedRatesReposiotry = fixedRatesReposiotry;
             _detailedCalculationConnection = detailedCalculationConnection;
@@ -35,6 +36,8 @@ namespace ChallengeTelzir.Domain.Services
             detailedCalculation.CalculateCall(fixedExist.Amount);
 
             _detailedCalculationConnection.Add(detailedCalculation);
+            if (Commit()) { }
+
             return Task.CompletedTask;
         }
 
