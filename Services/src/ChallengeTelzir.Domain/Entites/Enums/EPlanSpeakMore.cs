@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ChallengeTelzir.Domain.Entites
+namespace ChallengeTelzir.Domain.Entites.Enums
 {
     public enum EPlanSpeakMore
     {

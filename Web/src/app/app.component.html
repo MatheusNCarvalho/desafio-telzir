@@ -1,0 +1,97 @@
+<app-menu-superior></app-menu-superior>
+
+<div class="container">
+
+  <br />
+  <h2>FaleMais</h2>
+  <h4>Preencha corretamente os dados</h4>
+  <hr />
+  <form>
+
+    <div class="form-row">
+      <div class="form-group  col-md-6">
+        <label>Origem</label>
+        <select class="form-control" id="categoriaId">
+          <option *ngFor='let ddd of keys(dddsId)' [ngValue]="dddsId[ddd]">
+            {{ ddd }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label>Destino</label>
+        <select class="form-control" id="destinoId">
+          <option *ngFor='let ddd of keys(dddsId)' [ngValue]="dddsId[ddd]">
+            {{ ddd }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="tempo">Tempo</label>
+        <input type="number" id="tempo" placeholder="Tempo (requerido)" class="form-control">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label>Plano FaleMais</label>
+        <select class="form-control" id="planoFaleMaisId">
+          <option *ngFor='let plano of keys(planoFaleMaisId)' [ngValue]="planoFaleMaisId[plano]">
+            {{ plano }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-4 col-md-offset-2">
+          <span>
+            <button class="btn btn-primary" id="adicionarEvento" type="submit">Calcular</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  <br />
+  <hr/>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th scope="col">#</th>
+        <th scope="col">Origem</th>
+        <th scope="col">Destino</th>
+        <th scope="col">Tempo</th>
+        <th scope="col">Plano FaleMais</th>
+        <th scope="col">Com FaleMais</th>
+        <th scope="col">Sem FaleMais</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>011</th>
+        <td>016</td>
+        <td>20</td>
+        <td>FaleMais 30</td>
+        <td>$ 0,00</td>
+        <td>$ 38,00</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>Larry the Bird</td>
+        <td>@twitter</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>
