@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ChallengeTelzir.Domain.Core.Models;
 using ChallengeTelzir.Domain.Interfaces;
+using ChallengeTelzir.Domain.Interfaces.Repository;
 using ChallengeTelzir.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,30 +22,30 @@ namespace ChallengeTelzir.Infra.Data.Repository
             DbSet = Db.Set<TEntity>();
         }
 
-        public async Task Add(TEntity obj)
+        public virtual async Task Add(TEntity obj)
         {
             await DbSet.AddAsync(obj);
-            // await SaveChanges();
+          
         }
 
-        public async Task Add(IList<TEntity> obj)
+        public virtual async Task Add(IList<TEntity> obj)
         {
             await DbSet.AddRangeAsync(obj);
-            //await SaveChanges();
+           
         }
 
 
-        public async Task<TEntity> FindById(Guid id)
+        public virtual async Task<TEntity> FindById(Guid id)
         {
             return await DbSet.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(id));
         }
 
-        public IList<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public virtual IList<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
             return DbSet.AsNoTracking().Where(predicate).ToList();
         }
 
-        public IList<TEntity> FindAll()
+        public virtual IList<TEntity> FindAll()
         {
             return DbSet.AsNoTracking().ToList();
         }

@@ -49,6 +49,11 @@ namespace ChallengeTelzir.Services.API
                 app.UseHsts();
             }
 
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader(); c.AllowAnyMethod(); c.AllowAnyOrigin();
+                c.WithExposedHeaders("Content-Disposition");
+            });
             app.UseHttpsRedirection();
             app.UseMvc();
             app.UseSwagger();

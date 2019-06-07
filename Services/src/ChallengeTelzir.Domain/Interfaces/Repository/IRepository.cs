@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ChallengeTelzir.Domain.Core.Models;
 
-namespace ChallengeTelzir.Domain.Interfaces
+namespace ChallengeTelzir.Domain.Interfaces.Repository
 {
     public interface IRepository<TEntity> : IDisposable where TEntity : Entity
     {

@@ -1,0 +1,25 @@
+<table class="table table-bordered" *ngIf="data.length >0">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Origem</th>
+      <th scope="col">Destino</th>
+      <th scope="col">Tempo</th>
+      <th scope="col">Plano FaleMais</th>
+      <th scope="col">Com FaleMais</th>
+      <th scope="col">Sem FaleMais</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let item of data">
+      <th></th>
+      <td>{{item.originId}}</td>
+      <td>{{item.distinguishedId}}</td>
+      <td>{{item.time}}</td>
+      <td>{{item.planSpeakMoreId}}</td>
+      <td>{{item.withoutSpeakMore | currency:'BRL':symbol:'1.2-2':'pt'}}</td>
+      <td>{{item.withSpeakMore | currency:'BRL':symbol:'1.2-2':'pt'}}</td>
+    </tr>
+  </tbody>
+</table>

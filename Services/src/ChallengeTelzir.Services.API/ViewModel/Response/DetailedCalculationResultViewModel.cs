@@ -1,5 +1,4 @@
 ﻿using ChallengeTelzir.Domain.Core.Utils;
-using ChallengeTelzir.Domain.Entites;
 using ChallengeTelzir.Domain.Entites.Enums;
 using Newtonsoft.Json;
 

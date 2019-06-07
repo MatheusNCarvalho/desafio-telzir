@@ -4,6 +4,7 @@ using AutoMapper;
 using ChallengeTelzir.Domain.Core.Notifications;
 using ChallengeTelzir.Domain.DTO;
 using ChallengeTelzir.Domain.Interfaces;
+using ChallengeTelzir.Domain.Interfaces.Repository;
 using ChallengeTelzir.Domain.Interfaces.Services;
 using ChallengeTelzir.Services.API.ViewModel.Request;
 using ChallengeTelzir.Services.API.ViewModel.Response;
